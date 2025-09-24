@@ -1,0 +1,241 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html,body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./assets/purple.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffff;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    overflow-x: hidden;
+    
+}
+.container {
+ 
+    transform: translate(0%,400%);
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    /* transform: translate(100%,100%); */
+    box-shadow: rgba(0, 0, 0, 0.9);
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.switch input {
+    opacity: 0px;
+    width: 0px;
+    height: 0px;
+}   
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0 ;
+    bottom: 0;
+    background-color: #0000;
+    transition: 0.4s;
+    border-radius: 10px;
+    
+} 
+.slider:before {
+    position: absolute;
+    content: "";
+    height:26px;
+    width: 40px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius:10px ;
+}
+input:checked + .slider:before{
+    background-color: #cb17ee;
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+#new-page {
+    position: relative;
+    height: 100vh;
+    background-image: url(./assets/purple.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hand {
+    position: absolute;
+    width: 25px;
+    top: 20px;
+    left: -10px;
+    transform: translate(-0%, 50%);
+    font-size: 24px;
+    animation: point 2s infinite;
+    color: #ccc;
+}
+@keyframes point {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.2);
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+#new-page.hidden {
+    display: none;
+}
+
+#header {
+    position: absolute;
+    top:-100px ;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    color: #ffff;
+    text-align: center;
+    transition: top 0.5s ease-in-out;
+}
+#header.show {
+    top: 0;
+}
+
+#number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 8px;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.9);
+    width: 120px;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+#number.show {
+    opacity: 1;
+}
+
+#number-button {
+    background-color: #4f055e;
+    color: #ffff;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+}
+#number-button.show {
+    opacity: 1;
+
+}
+
+ /* #loader {
+    
+    position: relative;
+    height: 100vh;
+    background-image: url(./assets/purple.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+}  */
+ /* #loader.show{
+    opacity: 1;
+}  */
+.loader-container{
+    display: flex;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: bold;
+    gap: 20px;
+    width: 50%;
+    color: #ccc;
+    transform: translate(50%, 1000%);
+    opacity: 0;
+}
+.loader-container.show {
+    opacity: 1;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    animation: load 1s infinite;
+    margin-top: 10px;
+    opacity: 0;
+}
+
+.dot:nth-child(1) {
+    animation-delay: 0s;
+}
+.dot:nth-child(1) {
+    animation-delay: 0s;
+}
+.dot:nth-child(1) {
+    animation-delay: 0s;
+}
+ @keyframes load {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+        
+    }
+    100% {
+        transform: scale(1);
+        
+    }
+ }
+.dot.show{
+    opacity: 1;
+}
+.color-wheel {
+        position: relative;
+    height: 100vh;
+    background-image: url(./assets/purple.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+#color-wheel{
+
+}
+#spin-button {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+#result-dialogue {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

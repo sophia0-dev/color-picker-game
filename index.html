@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1> Click the Button Below to Start</h1>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider"></span>
+    <span class="hand">👉</span>
+  </label>
+  </div>
+
+  <!-- New page -->
+   <div id="new-page" class="hidden">
+    <header id="header"> Enter a valid number between 0 and 9</header>
+    <input type="number" id="number">
+    <button id="number-button">Enter</button>
+   </div>
+
+   <!-- loading page  -->
+    <div class="loader" id="loader">
+        
+    <div class="loader-container">
+    <h3>Loading</h3>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    </div>
+    </div>
+
+    <!-- color page -->
+     <div class="color-wheel">
+     <canvas id="color-wheel" width="400" height="400" ></canvas>
+     <button id="spin-button">Spin</button>
+     <div id="result-dialogue" style="display: none;"></div>
+     </div>
+</body>
+<script src="index.js"></script>
+</html> 
